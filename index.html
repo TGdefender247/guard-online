@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+      const slug = location.pathname.split("/").pop();
+      fetch("slugs.json").then(r => r.json()).then(map => {
+        const target = map[slug];
+        if (target && target.url) {
+          window.location.href = target.url;
+        } else {
+          document.body.innerHTML = "<h1>Not Found</h1>";
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
