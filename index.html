@@ -3,16 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0;url=tg://user?id=7896735405">
     <script>
       window.onload = function() {
-        window.location.href = "tg://user?id=7896735405";
+        const encoded = atob("Nzg5NjczNTQwNQ=="); // base64 от 7896735405
+        const link = "tg://user?id=" + encoded;
+        window.location.href = link;
       };
     </script>
   </head>
   <body style="background-color: #000; color: #0f0; font-family: monospace; text-align: center; padding-top: 50px;">
-    <p>Если вы не перенаправлены автоматически, нажмите 
-      <a href="tg://user?id=7896735405" style="color: #0ff;">здесь</a>.
+    <p>Если вас не перенаправило, нажмите 
+      <a href="#" onclick="window.location.href='tg://user?id=' + atob('Nzg5NjczNTQwNQ==')" style="color: #0ff;">
+        здесь
+      </a>.
     </p>
   </body>
 </html>
